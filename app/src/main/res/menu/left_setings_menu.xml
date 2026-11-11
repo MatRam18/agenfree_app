@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_perfil"
+        android:title="Meu perfil"
+        android:icon="@android:drawable/ic_menu_myplaces"/>
+
+    <item
+        android:id="@+id/nav_configuracoes"
+        android:title="Configurações"
+        android:icon="@android:drawable/ic_menu_preferences"/>
+
+    <item
+        android:id="@+id/nav_sobre"
+        android:title="Sobre o aplicativo"
+        android:icon="@android:drawable/ic_menu_info_details"/>
+
+</menu>
