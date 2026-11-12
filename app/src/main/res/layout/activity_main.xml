@@ -15,16 +15,69 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Barra superior com botão hamburger -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#A3A3A3"
-            app:title="Meu aplicativo"
-            app:titleTextColor="@android:color/white"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <!-- Responsável por mostrar os Fragments -->
+            <!--   Corpo arredondado do botão hamburger -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="60dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <!-- Barra superior com botão hamburger -->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:background="#A3A3A3"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetEnd="0dp"
+                    app:contentInsetStartWithNavigation="0dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Espaço flexível -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Avatar do usuário -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/profileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="60dp"
+                app:cardElevation="3dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:src="@drawable/ic_user"
+                    android:background="#A6A6A6"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Foto do perfil" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </LinearLayout>
+
+        <!-- Responsável por mostrar os Fragments do bottomnavigation -->
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment"
             android:layout_width="match_parent"
@@ -34,7 +87,7 @@
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_main"/>
 
-        <!-- Navigation Bottom arredondado -->
+        <!--   Corpo arredondado do bottomnavigation -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,12 +97,15 @@
             app:cardElevation="8dp"
             app:strokeWidth="0dp">
 
+            <!-- O bottomnavigation-->
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottom_navigation"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:background="#A3A3A3"
-                app:menu="@menu/bottom_navigation_menu"/>
+                app:menu="@menu/bottom_navigation_menu"
+                app:labelVisibilityMode="unlabeled"/>
 
         </com.google.android.material.card.MaterialCardView>
 
