@@ -7,11 +7,28 @@
     android:layout_height="match_parent"
     tools:context=".UserPage">
 
-    <TextView
+    <!-- Avatar do usuário -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/userBackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="é os guri da redensa pai, daleeee"
-        android:textSize="70dp"
-        />
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="60dp"
+        app:cardElevation="3dp"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:id="@+id/userBack"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:src="@drawable/ic_back"
+            android:background="#A6A6A6"
+            android:scaleType="centerCrop"
+            android:contentDescription="Voltar para menu" />
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

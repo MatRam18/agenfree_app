@@ -20,9 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
     private ActionBarDrawerToggle toggle;
 
+    public Boolean testStirng = Boolean.FALSE;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        Não entendi direito como essa parte funciona, mas para usar o binding ela é obrigatória
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         initNavigations();
@@ -58,8 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
 //      Clica no perfil do usuário e muda de Activity
         binding.profileButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, UserPage.class);
-            startActivity(intent);
+            if (AppData.getInstance().fakeToken == true) {
+                Intent intent = new Intent(MainActivity.this, UserPage.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+            }
         });
 
         // Navegação do Drawer
