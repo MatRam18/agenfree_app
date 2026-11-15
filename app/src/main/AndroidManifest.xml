@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UserPage"
+            android:name=".Profile"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
@@ -39,6 +39,22 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Logon"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Search"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Config"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MyService"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ProfileEdit"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

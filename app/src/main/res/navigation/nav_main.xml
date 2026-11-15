@@ -20,4 +20,5 @@
         android:name="com.example.agenfree.fragments.ServiceFragment"
         android:label="fragment_service"
         tools:layout="@layout/fragment_service" />
+
 </navigation>
