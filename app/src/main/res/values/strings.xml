@@ -7,4 +7,9 @@
     <string name="drawer_close">Fechar menu</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">Fullscreen\nContent</string>
+    <string name="btn_service_details">Ver Detalhes do Serviço</string>
+    <string name="search_title">PESQUISA</string>
+    <string name="service_details_title">DETALHES DO SERVIÇO</string>
+    <string name="btn_go_to_confirmation">Ir para Confirmação</string>
+    <string name="confirm_title">CONFIRMAR?</string>
 </resources>
